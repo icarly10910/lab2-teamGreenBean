@@ -8,9 +8,9 @@ object Lab2 extends jsy.util.JsyApplication with Lab2Like {
 
   /*
    * CSCI 3155: Lab 2
-   * <Your Name>
+   * <Carly Romig>
    * 
-   * Partner: <Your Partner's Name>
+   * Partner: <Arthi Kumar>
    * Collaborators: <Any Collaborators>
    */
 
@@ -45,7 +45,6 @@ object Lab2 extends jsy.util.JsyApplication with Lab2Like {
    */
 
 
-
   /* Some useful Scala methods for working with Scala values include:
    * - Double.NaN
    * - s.toDouble (for s: String)
@@ -62,7 +61,9 @@ object Lab2 extends jsy.util.JsyApplication with Lab2Like {
     require(isValue(v))
     (v: @unchecked) match {
       case N(n) => n
-      case _ => ???
+      case B(b) => if (b) 1 else 0
+      case S(s) => try {s.toDouble} catch {case _: NumberFormatException => Double.NaN}
+      case Undefined => Double.NaN
     }
   }
 
@@ -70,7 +71,14 @@ object Lab2 extends jsy.util.JsyApplication with Lab2Like {
     require(isValue(v))
     (v: @unchecked) match {
       case B(b) => b
-      case _ => ???
+      case N(n) => {
+        if (n == 0) false
+        else if (n.isNaN) false
+        else true                 //if n>0, return true
+      }
+      case S(s) => true           //?? maybe
+
+      case Undefined => false
     }
   }
 
@@ -79,16 +87,48 @@ object Lab2 extends jsy.util.JsyApplication with Lab2Like {
     (v: @unchecked) match {
       case S(s) => s
       case Undefined => "undefined"
-      case _ => ???
+      case B(b) => ??? //if (b <= 0) "false" else "true"
+      case N(n) => ???
     }
   }
 
   def eval(env: Env, e: Expr): Expr = {
     e match {
+      case Var(x: String) => ???
+      case ConstDecl(x: String, e1: Expr, e2: Expr) => ???
+
       /* Base Cases */
+
+      case Unary(uop: Uop, e1: Expr) => {
+        uop match {
+          case Neg => N(0 - toNumber(e1))
+          case Not => B(!toBoolean(e1))
+        }
+      }
+
+      case Binary(bop: Bop, e1: Expr, e2: Expr) => {
+        bop match {
+          case Plus => ???
+          case Minus => N(toNumber(e1)-toNumber(e2))
+          case Times => N(toNumber(e1)*toNumber(e2))
+          case Div => N(toNumber(e1)/toNumber(e2))
+          case Eq => B(toNumber(e1) == toNumber(e2))
+          case Ne => B(toNumber(e1) != toNumber(e2))
+          case Lt => B(toNumber(e1) < toNumber(e2))
+          case Le => B(toNumber(e1) <= toNumber(e2))
+          case Gt => B(toNumber(e1) > toNumber(e2))
+          case Ge => B(toNumber(e1) >= toNumber(e2))
+
+          case And => ???
+          case Or => ???
+
+          case Seq => ???
+        }
+      }
 
       /* Inductive Cases */
       case Print(e1) => println(pretty(eval(env, e1))); Undefined
+      case If(e1: Expr, e2: Expr, e3: Expr) => ???
 
       case _ => ???
     }
