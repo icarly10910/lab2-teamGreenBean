@@ -44,8 +44,7 @@
 
 ## Question 2 - Grammars: Understanding a Language
 
-### (a) Describe the language defined by the following grammar:
-Consider the following two grammars for expressions e. In both grammars, operator and operand are the same; you do not need to know their productions for this question.
+### (a) Consider the following two grammars for expressions e. In both grammars, operator and operand are the same; you do not need to know their productions for this question.
 
 		e ::= operand | e operator operand
 
