@@ -25,8 +25,8 @@ With this specific language,a string can be infinitely long but will always star
 		 -> baab    [by B->a]
 
 
-		2.bbbab 
-:x:
+:x:		2.bbbab 
+
 
 		3.bbaaaaa 
 :x:
