@@ -54,12 +54,10 @@ This grammar results in more than one parse tree for one string. For example, if
 		A⇓n
 ### for the judgment form that should mean A has a total n a symbols where n is the meta- variable for natural numbers. Define this judgment form via a set of inference rules. You may rely upon arithmetic operators over natural numbers. Hint: There should be one inference rule for each production of the non-terminal A (called a syntax-directed judgment form).
 
+![alt text](https://github.com/icarly10910/lab2-teamGreenBean/blob/master/images/inference%20rule.jpg)
 
-
-	if x&darr;n   y&darr;m
-	---
-	x&darr;n   y&darr;m 
-
+![alt text](https://github.com/icarly10910/lab2-teamGreenBean/blob/master/images/example.jpg)
+![alt text](https://github.com/icarly10910/lab2-teamGreenBean/blob/master/images/example2.jpg)
 
 
 ## Question 2 - Grammars: Understanding a Language
