@@ -26,10 +26,7 @@ With this specific language,a string can be infinitely long but will always star
 
 
 :x:		2.bbbab 
-
-
-		3.bbaaaaa 
-:x:
+:x:		3.bbaaaaa 
 
 		4.bbaab
 "bbaab" is a string in this language because it can be derived from a version of the AST through left associative steps:
