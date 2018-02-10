@@ -32,9 +32,9 @@
 		4.acd
 		5.accc
 
-### (d)Consider the following grammar:
+### (d) Consider the following grammar:
 		A ::= a|b|A+A
-### Show that this grammar is ambiguous.
+		### Show that this grammar is ambiguous.
 
 ### (e) Let us ascribe a semantics to the syntactic objects A specified in the above grammar from part D. In particular, let us write
 		A⇓n
