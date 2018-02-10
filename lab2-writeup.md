@@ -56,9 +56,9 @@ This grammar results in more than one parse tree for one string. For example, if
 
 
 
-(if x&darr;n   y&darr;m)
----
-x&darr;n   y&darr;m 
+	if x&darr;n   y&darr;m
+	---
+	x&darr;n   y&darr;m 
 
 
 
