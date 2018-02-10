@@ -47,7 +47,7 @@ With this specific language,a string can be infinitely long but will always star
 ### (d) Consider the following grammar:
 		A ::= a|b|A+A
 ### Show that this grammar is ambiguous.
-![alt text](https://github.com/icarly10910/lab2-teamGreenBean/blob/master/images/image2.jpg)
+![alt text](https://github.com/icarly10910/lab2-teamGreenBean/blob/master/images/image4.jpg)
 This grammar results in more than one parse tree for one string. For example, if you take the string "a+b+a," it is possibile that the tree can be left and right associative, as shown in the example. This means the grammar is ambiguous, since there's more than one way to get to your output.
 
 ### (e) Let us ascribe a semantics to the syntactic objects A specified in the above grammar from part D. In particular, let us write
