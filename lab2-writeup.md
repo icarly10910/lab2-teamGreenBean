@@ -1,5 +1,3 @@
-![alt text](https://github.com/ejames917/ppl_lab1/blob/master/images/p2.png)
-
 # Lab 1 Writeup: Arthi Kumar and Carly Romig
 
 ## Question 1 - Grammars: Synthetic Examples
@@ -8,7 +6,7 @@
 		S ::= ABA
 		A ::= a|aA
 		B ::= ε|bBc|BB 
-
+![alt text](https://github.com/icarly10910/lab2-teamGreenBean/blob/master/images/image1.jpg)
 ### (b) Consider the following grammar:
 		S ::= AaBb
 		A ::= Ab|b
