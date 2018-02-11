@@ -94,10 +94,10 @@ They generate the same pattern, the first grammar repeating "yx" to the left, wh
 
 Assuming the instructions mean that a float point number could be positive or negative followed by an optional exponent with a positive or negative number, the BNF grammar would be the following:
 		
-		S::=-A|A   
-		F::=-B|B
-		A::=B.C|BCEF
-		B::=DC|D
-		C::=Z|ZC
-		D::=0|1|2|3|4|5|6|7|8|9
-		Z::=0|D
+		S ::= -A|A   
+		F ::= -B|B
+		A ::= B.C|BCEF
+		B ::= DC|D
+		C ::= Z|ZC
+		D ::= 0|1|2|3|4|5|6|7|8|9
+		Z ::= 0|D
