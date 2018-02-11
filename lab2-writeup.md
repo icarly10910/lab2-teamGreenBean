@@ -82,6 +82,11 @@ They generate the same pattern, the first grammar repeating "yx" to the left, wh
 
 ### (b) Write a Scala expression to determine if ‘−’ has higher precedence than ‘<<’ or vice versa. Make sure that you are checking for precedence in your expression and not for left or right associativity. Use parentheses to indicate the possible abstract syntax trees, and then show the evaluation of the possible expressions. Finally, explain how you arrived at the relative precedence of ‘−’ and ‘<<’ based on the output that you saw in the Scala interpreter.
 
+By using node.js, we were able to calculate which had a higher precedence. First, we played around parenthesis to see our outcomes:
+
+		a. (-n1) <<n2
+		b. -(n1<<n2)
+
 ### (c) Give a BNF grammar for floating point numbers that are made up of a fraction (e.g., 5.6 or 3.123 or -2.5) followed by an optional exponent (e.g., E10 or E-10). The expo- nent, if it exists, is the letter ‘E’ followed by an integer. For example, the following are floating point numbers: 3.5E3, 3.123E30, -2.5E2, -2.5E-2, and 3.5. The following are not examples of floating point numbers: 3.E3, E3, and 3.0E4.5.
 
 ### More precisely, our floating point numbers must have a decimal point, do not have leading zeros, can have any number of trailing zeros, non-zero exponents (if it exists), must have non-zero fraction to have an exponent, and cannot have a ‘-’ in front of a zero number. The exponent cannot have leading zeros.
