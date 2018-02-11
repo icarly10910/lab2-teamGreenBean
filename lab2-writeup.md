@@ -54,10 +54,15 @@ This grammar results in more than one parse tree for one string. For example, if
 		A⇓n
 ### for the judgment form that should mean A has a total n a symbols where n is the meta- variable for natural numbers. Define this judgment form via a set of inference rules. You may rely upon arithmetic operators over natural numbers. Hint: There should be one inference rule for each production of the non-terminal A (called a syntax-directed judgment form).
 
+The image below displays the inference rules we developed for A ::= a|b|A+A. Since we are considering how many **a**s are mentioned in a string, we must calculate how many **a**s can be found in each case:
+
+By first using the case of "A+A", we define the first A to be x, and the second A to be y. Thus, assuming they are different variables, the number of times a shows up can be added together, as shown by the second line(x+y ⇓ n+m). We can then find the amount of **a**s using this method. Since both **a** and **b** are also cases in our grammar, we also put them into account in our set of inference rules. Since there are no operations that are included in either variable, both **a** and **b** are axioms.Thus we simply use their cases to exemplify **n** times **a** appears in a string. For the simple variable **a**, this would be 1 time, and for **b** it would evidently be 0 since no **a** variable ever occurs in **b**. 
 ![alt text](https://github.com/icarly10910/lab2-teamGreenBean/blob/master/images/inference%20rule.jpg)
 
 ![alt text](https://github.com/icarly10910/lab2-teamGreenBean/blob/master/images/example.jpg)
+The image above can demonstrate this idea. It takes "a+b," substituing a and b for x and y and then solves A⇓n using the inference rules we developed for the language. Since theres one **a** and one **b**, the result is 0 + 1, meaning that theres one occurence of a in the string.
 ![alt text](https://github.com/icarly10910/lab2-teamGreenBean/blob/master/images/example2.jpg)
+In this example, we take an input string of "a+a+a" and display that the resulting value would be 3. We do this by using our defined set of inference rules to display that you can get a+a+a⇓3 in two steps. The first step is taking the first string a as x, and the second as y. after solving for the first part of the problem, "a+a", we then take this argument as x, and the last "a" as y. We then use the same inference rules to solve again, resulting in a+a+a⇓3.
 
 
 ## Question 2 - Grammars: Understanding a Language
